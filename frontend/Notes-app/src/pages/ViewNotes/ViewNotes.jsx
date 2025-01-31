@@ -15,7 +15,7 @@ const ViewNotes = () => {
   const getAllNotes = async () => {
     try {
       const token = localStorage.getItem('token')
-      const res = await axios.get('http://localhost:4000/api/note/all', {
+      const res = await axios.get('https://notes-app-d4z7.onrender.com/api/note/all', {
         headers: {
           Authorization: `Bearer ${token}`
         },
@@ -33,7 +33,7 @@ const ViewNotes = () => {
   const handleDelete = async (noteId) => {
     try {
       const token = localStorage.getItem('token')
-      const res = await axios.delete(`http://localhost:4000/api/note/delete/${noteId}`, {
+      const res = await axios.delete(`https://notes-app-d4z7.onrender.com/api/note/delete/${noteId}`, {
         headers: {
           Authorization: `Bearer ${token}`
         },
@@ -52,7 +52,7 @@ const ViewNotes = () => {
   const handleEdit = async (noteId) => {
     try {
       const token = localStorage.getItem('token')
-      const res = await axios.get(`http://localhost:4000/api/note/${noteId}`, {
+      const res = await axios.get(`https://notes-app-d4z7.onrender.com/api/note/${noteId}`, {
         headers: {
           Authorization: `Bearer ${token}`
         },

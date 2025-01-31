@@ -17,7 +17,7 @@ const AddEditNotes = ({ onClose, noteData, type, getAllNotes }) => {
       const token = localStorage.getItem('token');
       
       const res = await axios.post(
-        `http://localhost:4000/api/note/edit/${noteId}`,
+        `https://notes-app-d4z7.onrender.com/api/note/edit/${noteId}`,
         { title, content, tags },
         {
           headers: {
@@ -52,7 +52,7 @@ const AddEditNotes = ({ onClose, noteData, type, getAllNotes }) => {
       const token = localStorage.getItem('token');
       
       const res = await axios.post(
-        'http://localhost:4000/api/note/add',
+        'https://notes-app-d4z7.onrender.com/api/note/add',
         { title, content, tags },
         {
           headers: {

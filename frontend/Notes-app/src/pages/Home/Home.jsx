@@ -32,7 +32,7 @@ const Home = () => {
   const getAllNotes = async () => {
     try {
       const token = localStorage.getItem('token')
-      const res = await axios.get('http://localhost:4000/api/note/all', {
+      const res = await axios.get('https://notes-app-d4z7.onrender.com/api/note/all', {
         headers: {
           Authorization: `Bearer ${token}`
         },
@@ -50,7 +50,7 @@ const Home = () => {
   const handleDelete = async (noteId) => {
     try {
       const token = localStorage.getItem('token')
-      const res = await axios.delete(`http://localhost:4000/api/note/delete/${noteId}`, {
+      const res = await axios.delete(`https://notes-app-d4z7.onrender.com/api/note/delete/${noteId}`, {
         headers: {
           Authorization: `Bearer ${token}`
         },
@@ -68,7 +68,7 @@ const Home = () => {
 
   const onSearchNote = async (query) => {
     try {
-      const res = await axios.get("http://localhost:3000/api/note/search", {
+      const res = await axios.get("https://notes-app-d4z7.onrender.com/api/note/search", {
         params: { query },
         withCredentials: true,
       })
@@ -88,7 +88,7 @@ const Home = () => {
   const updateIsPinned = async (noteData) => {
     try {
       const res = await axios.put(
-        `http://localhost:3000/api/note/update-note-pinned/${noteData._id}`,
+        `https://notes-app-d4z7.onrender.com/api/note/update-note-pinned/${noteData._id}`,
         { isPinned: !noteData.isPinned },
         { withCredentials: true }
       )

@@ -22,7 +22,7 @@ const Navbar = () => {
     try {
       dispatch(signoutStart())
 
-      const res = await axios.post("http://localhost:4000/api/auth/signout", {}, {
+      const res = await axios.post("https://notes-app-d4z7.onrender.com/api/auth/signout", {}, {
         withCredentials: true,
       })
 
